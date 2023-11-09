@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('Polygon2.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    background-position: auto center;
+    height: 100%;
+}
+.alvaro-container {
+    align-items: center;
+}
+.col-6 {
+    margin-left: 700px;
+    margin-top: 50px;
+}
+.logo{
+    margin-left: 1200px;
+    margin-top: 30px;
+    width:170px;
+}
+
+.icon {
+    width: 30px;
+    margin-left: 30px;
+}
+.custom-bullet {
+    list-style-image: url('Ads.png');
+    font-size: 30px;
+    font-weight: light;
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    word-spacing: 0.1em;
+    color: #383838;
+}
+.custom-bullet h4{
+    font-size: 35px;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.custom-bullet p{
+    padding-left: 20px;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+.custom-bullet li{
+    line-height: 1; /* Adjust line height for vertical alignment */
+    align-items: center; /* Vertically align text with the bullet */
+}
+.headline{
+    font-size: 45px;
+    font-weight: bold;
+}
+

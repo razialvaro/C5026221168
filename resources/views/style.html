@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>CSS</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p, div{
+            text-align: center;
+        }
+        .salam{
+            font-size: larger;
+            text-align: right;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .garisbawah{
+            text-decoration: underline;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--Inline CSS, digunakan jika hanya 1 bagian di 1 halaman yang berbeda-->
+    Sup <b style="
+    color:red;
+    text-decoration: underline;
+    text-shadow: 2px 2px blue;">My</b> G?
+    <!--Inpage CSS, digunakan jika yg berbeda hanya satu halaman-->
+    <div class="garisbawah salam">Sup My G?😋</div> <!--div ga ngaruh ke style-->
+    <!--External File, digunakan untuk global 1 situs-->
+    <span>Sup My G?</span>
+    <p>Sup My G?</p>
+    Sup My G?
+</body>
+
+</html>

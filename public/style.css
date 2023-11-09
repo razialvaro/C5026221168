@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito:wght@200&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+    --primary-color: #FB6A27;
+    --dark-color: #0F0F0F;
+    --gray-color: gray;
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+section{
+    padding: 70px 0;
+    margin-top: 50px;
+}
+section .section-title{
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-orange{
+    background-color: var(--primary-color);
+    color: white;
+}
+.text-orange{
+    color: var(--primary-color);
+}
+.text-black{
+    color: var(--dark-color);
+}
+.fs-7{
+    font-size: var(--small-font-size);
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* PER SECTION CSS */
+/* NAVBAR */
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active{
+    color: var(--primary-color);
+
+}
+/* HEADER */
+.header-section .header-title{
+    font-size: var(--h1-font-size);
+}
+
+.header-section .header-skill{
+    color: #0F0F0F;
+}
+.header-section .header-skill:hover{
+    color: var(--primary-color);
+}
+.header-section .header-skill i{
+    transition: .3s;
+}
+.header-section .header-skill:hover i{
+    transform: rotate(-90deg);
+}
+.header-section .header-img{
+    width: auto;
+    height: 600px;
+    box-shadow: #0F0F0F;
+    border: 5px solid #FB6A27;
+    border-radius: 100px;
+}
+.portfolio-section .card .card-img-top{
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+    text-align: center;
+    display: flex;
+}
+.carousel {
+    width:640px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid var(--primary-color); /* Set the border color and width */
+    border-radius: 10px; /* Add rounded corners (optional) */
+    background-color: #0F0F0F;
+  }
+  #demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+
+  /* Style the carousel items */
+  .carousel-item {
+    text-align: center; /* Center the content within each slide */
+    max-width: 100%; /* Adjust the max-width as needed */
+    width: auto; /* Set a specific width if needed */
+  }
+
+  /* Customize the carousel caption */
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5) round; /* Semi-transparent background */
+    color: #fff; /* Text color */
+  }
+
+  /* Customize the navigation arrows */
+  .carousel-control-prev, .carousel-control-next {
+    background-color: transparent; /* Make the arrows transparent */
+    border: none; /* Remove borders */
+    font-size: 2rem; /* Adjust the arrow size */
+  }
+
+  .skills-section{
+    background-color: var(--dark-color);
+    background-size: cover;
+  }
+  .skills-section .progress-bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--gray-color);
+  }
+  .skills-section .progress-bar .progress{
+    background-color: var(--primary-color);
+  }
+  .skills-section .skills-img{
+    width: 90%;
+    margin-top: 50px;
+  }
+  .works, .labelform {
+    font-weight: var(--fwsemibold);
+    color: var(--primary-color)
+  }
+.alvaro-container a{
+    border: 5px solid black;
+    text-align: center;
+    margin-right: auto;
+    margin-left:auto;
+    width:auto;
+    /* padding-top: 3px; */
+    /* padding-bottom: 2px; */
+    max-width: 300px;
+    border-radius: 30px;
+    display: block;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    /* height: 35px; */
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    font-weight: 400;
+    /* line-height: 1.5; */
+}
+.alvaro-link a:hover{
+    transform: scale(1.05);
+}
