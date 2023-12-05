@@ -88,7 +88,17 @@ class PegawaiController extends Controller
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('index',['pegawai' => $pegawai, 'cari' => $cari]);
+
+	}
+
+    public function view($id)
+	{
+		// mengambil data pegawai berdasarkan id yang dipilih
+		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+		// passing data pegawai yang didapat ke view edit.blade.php
+		return view('view',['pegawai' => $pegawai]);
+
 
 	}
 }
