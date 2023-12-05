@@ -13,6 +13,12 @@
 
 <div class="row">
 
+    <div class="form-group row">
+        <label for="gambar" class="col-sm-2 col-form-label">Gambar</label>
+        <div class="col-sm-10">
+            <input type="file" class="form-control-file" id="gambar" name="gambar">
+        </div>
+    </div>
 
 <div class="col-8">
 	<form action="/pegawai/store" method="post" class="form-horizontal">
@@ -35,6 +41,7 @@
                 <input type="number" class="form-control" id="umur" name="umur">
             </div>
         </div>
+
         <div class="form-group row">
             <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
             <div class="col-sm-10">
