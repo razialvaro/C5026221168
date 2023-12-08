@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">5026221168 Razi Alvaro A.</a>
 
         <!-- Links -->
         <ul class="navbar-nav">
