@@ -67,3 +67,13 @@ Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiController@index');
 Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiController@tambah');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiController@store');
+
+Route::get('/vga','App\Http\Controllers\VgaController@index');
+Route::get('/vga/tambah','App\Http\Controllers\VgaController@tambah');
+Route::post('/vga/store','App\Http\Controllers\VgaController@store');
+Route::get('/vga/edit/{id}','App\Http\Controllers\VgaController@edit');
+Route::get('/vga/view/{id}','App\Http\Controllers\VgaController@view');
+Route::post('/vga/update','App\Http\Controllers\VgaController@update');
+Route::get('/vga/hapus/{id}','App\Http\Controllers\VgaController@hapus');
+Route::get('/vga/cari','App\Http\Controllers\VgaController@cari');
+

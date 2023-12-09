@@ -4,10 +4,10 @@
 @section('konten')
 
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>View Pegawai</h3>
 
-	<a href="/pegawai"> Kembali</a>
+	<h3>View VGA</h3>
+
+	<a href="/vga"> Kembali</a>
 
 	<br/>
 	<br/>
@@ -17,41 +17,36 @@
 
         </div>
         <div class="col-8">
-            @foreach($pegawai as $p)
+            @foreach($vga as $v)
     <fieldset disabled>
-	<form action="/pegawai/update" method="post" class="form-horizontal">
+	<form action="/vga/update" method="post" class="form-horizontal">
 		{{ csrf_field() }}
         <div class="form-group row">
-            <label for="first_name" class="col-sm-2 col-form-label">Nama</label>
+            <label for="merk" class="col-sm-2 col-form-label">Merk</label>
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" required="required" name="nama" value="{{ $p->pegawai_nama }}">
+                <input type="text" class="form-control" required="required" name="merk" value="{{ $v->merkvga }}">
             </div>
         </div>
         <div class="form-group row">
-            <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+            <label for="stock" class="col-sm-2 col-form-label">Stock</label>
             <div class="col-sm-10">
-                <input type="text"  class="form-control" id="jabatan" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}">
+                <input type="number"  class="form-control" id="jabatan" required="required" name="stock" value="{{ $v->stockvga }}">
             </div>
         </div>
         <div class="form-group row">
-            <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+            <label for="tersedia" class="col-sm-2 col-form-label">Ketersediaan</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" id="umur" required="required" name="umur" value="{{ $p->pegawai_umur }}">
+                <input type="text" class="form-control" id="umur" required="required" name="tersedia" value="{{ $v->tersedia }}">
             </div>
         </div>
-        <div class="form-group row">
-            <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
-            <div class="col-sm-10">
-                <textarea class="form-control" id="alamat"required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea>
-                </div>
-        </div>
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
+
+		<input type="hidden" name="kode" value="{{ $v->kodevga }}"> <br/>
 
 
 	</form>
     </fieldset>
-    <a href="/pegawai"><input  type="submit" value="Oke" class="btn btn-primary"></a>
+    <a href="/vga"><input  type="submit" value="Oke" class="btn btn-primary"></a>
     </div>
 
 </div>
