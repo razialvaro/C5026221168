@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,3 +86,7 @@ Route::get('/mobil/view/{kode}', 'App\Http\Controllers\MobilController@view');
 Route::post('/mobil/update', 'App\Http\Controllers\MobilController@update');
 Route::get('/mobil/hapus/{kode}', 'App\Http\Controllers\MobilController@hapus');
 Route::get('/mobil/cari', 'App\Http\Controllers\MobilController@cari');
+
+Route::get('/kategori','App\Http\Controllers\KategoriController@index');
+Route::post('/kategori/hasil', 'App\Http\Controllers\KategoriController@hasil');
+
