@@ -77,3 +77,11 @@ Route::post('/vga/update','App\Http\Controllers\VgaController@update');
 Route::get('/vga/hapus/{id}','App\Http\Controllers\VgaController@hapus');
 Route::get('/vga/cari','App\Http\Controllers\VgaController@cari');
 
+Route::get('/mobil', 'App\Http\Controllers\MobilController@index');
+Route::get('/mobil/tambah', 'App\Http\Controllers\MobilController@tambah');
+Route::post('/mobil/store', 'App\Http\Controllers\MobilController@store');
+Route::get('/mobil/edit/{kode}', 'App\Http\Controllers\MobilController@edit');
+Route::get('/mobil/view/{kode}', 'App\Http\Controllers\MobilController@view');
+Route::post('/mobil/update', 'App\Http\Controllers\MobilController@update');
+Route::get('/mobil/hapus/{kode}', 'App\Http\Controllers\MobilController@hapus');
+Route::get('/mobil/cari', 'App\Http\Controllers\MobilController@cari');

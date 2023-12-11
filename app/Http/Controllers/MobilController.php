@@ -6,16 +6,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class VgaController extends Controller
+class MobilController extends Controller
 {
 	public function index()
 	{
     	// mengambil data dari table pegawai
 		//$pegawai = DB::table('pegawai')->get();
-        $vga = DB::table('vga')->paginate(15);
+        $mobil = DB::table('mobil')->paginate(15);
 
     	// mengirim data pegawai ke view index
-		return view('indexvga',['vga' => $vga]);
+		return view('indexmobil',['mobil' => $mobil]);
 
 	}
 
@@ -24,7 +24,7 @@ class VgaController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambahvga');
+		return view('tambahmobil');
 
 	}
 
@@ -32,14 +32,14 @@ class VgaController extends Controller
 	public function store(Request $request)
 	{
 		// insert data ke table pegawai
-		DB::table('vga')->insert([
-			'kodevga' => $request->kode,
-			'merkvga' => $request->merk,
-			'stockvga' => $request->stock,
+		DB::table('mobil')->insert([
+			'kodemobil' => $request->kode,
+			'merkmobil' => $request->merk,
+			'stockmobil' => $request->stock,
 			'tersedia' => $request->tersedia
 		]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/vga');
+		return redirect('/mobil');
 
 	}
 
@@ -47,24 +47,24 @@ class VgaController extends Controller
 	public function edit($kode)
 	{
 		// mengambil data pegawai berdasarkan id yang dipilih
-		$vga = DB::table('vga')->where('kodevga',$kode)->get();
+		$mobil = DB::table('mobil')->where('kodemobil',$kode)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('editvga',['vga' => $vga]);
+		return view('editmobil',['mobil' => $mobil]);
 
 	}
 
     public function update(Request $request)
     {
         // update data pegawai
-        DB::table('vga')->where('kodevga', $request->kode)->update([
-            'kodevga' => $request->kode,
-            'merkvga' => $request->merk,
+        DB::table('mobil')->where('kodemobil', $request->kode)->update([
+            'kodemobil' => $request->kode,
+            'merkmobil' => $request->merk,
             'tersedia' => $request->tersedia,
-            'stockvga' => $request->stock
+            'stockmobil' => $request->stock
         ]);
 
         // alihkan halaman ke halaman pegawai
-        return redirect('/vga');
+        return redirect('/mobil');
     }
 
 
@@ -72,10 +72,10 @@ class VgaController extends Controller
 	public function hapus($kode)
 	{
 		// menghapus data pegawai berdasarkan id yang dipilih
-		DB::table('vga')->where('kodevga',$kode)->delete();
+		DB::table('mobil')->where('kodemobil',$kode)->delete();
 
 		// alihkan halaman ke halaman pegawai
-		return redirect('/vga');
+		return redirect('/mobil');
 	}
 
     public function cari(Request $request)
@@ -84,21 +84,21 @@ class VgaController extends Controller
 		$cari = $request->cari;
 
     		// mengambil data dari table pegawai sesuai pencarian data
-		$vga = DB::table('vga')
-		->where('merkvga','like',"%".$cari."%")
+		$mobil = DB::table('mobil')
+		->where('merkmobil','like',"%".$cari."%")
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('indexvga',['vga' => $vga, 'cari' => $cari]);
+		return view('indexmobil',['mobil' => $mobil, 'cari' => $cari]);
 
 	}
 
-    public function view($id)
+    public function view($kode)
 	{
 		// mengambil data pegawai berdasarkan id yang dipilih
-		$vga = DB::table('vga')->where('kodevga',$id)->get();
+		$mobil = DB::table('mobil')->where('kodemobil',$kode)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('view',['vga' => $vga]);
+		return view('viewmobil',['mobil' => $mobil]);
 
 
 	}
